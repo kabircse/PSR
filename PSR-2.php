@@ -193,4 +193,4 @@ As an aside, in both NetBeans and Eclipse you can set up this style in the edito
 To configure the format in NetBeans, go to Tools->Options->Editor->Formatting. You can set the indents for all languages. To set the rest of the style, click the PHP drop down under "Language:" and then in "Category:" drop down you can set the rest of the styles. Once formatting is set in NetBeans, all you have to do is select the code you want to format, and do an Alt-Shift-F and presto your code is formatted. I find I use this a lot while coding to keep my code looking good.
 
 
-Visit For details to http://www.geekgumbo.com/2013/05/19/psr-2-coding-style-guide/
+([Visit For details to] http://www.geekgumbo.com/2013/05/19/psr-2-coding-style-guide/)
