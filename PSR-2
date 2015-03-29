@@ -1,4 +1,4 @@
-**PSR-2**
+#PSR-2
 
 The PSR-2 Coding Style Guide is an extension of PSR-1, which I reviewed in my last post.  The PSR standards were created and agreed to by a diverse group of PHP framework and library developers, so that all frameworks and libraries will be able to be used together with the same syntax.
 
@@ -11,16 +11,18 @@ Let's expand this with PSR-2 which delves into how to style PHP code. This stand
 2. LINE LENGTH - No hard limit on line length, the soft limit is 120 characters, however you should try to keep your lines under 80 characters for easier reading.  Don't leave a blank space at the end of the line after the semicolon, and of course, only one statement per line.
 
 3. NAMESPACE - Use one blank line after a namespace declaration, and a blank line after a single or group of USE declarations.  The namespace must be the first line in the file after the PHP tag.  This makes developers more easily aware that the code is within a particular namespace or is using a particular alias for that namespace.  Here's an example:
-01	namespace Vendor\Package;
-02	 
-03	use PrintInterface;
-04	use TextClass as TC;
-05	use Vendor2\ORM3\OrmHandler;
-06	 
-07	class SetUpPrint extends TC implements PrintInterface
-08	{
-09	    ...Do something
-10	}
+
+#Example:
+	namespace Vendor\Package;
+	 
+	use PrintInterface;
+	use TextClass as TC;
+	use Vendor2\ORM3\OrmHandler;
+	 
+	class SetUpPrint extends TC implements PrintInterface
+	{
+	    ...Do something
+	}
 
 4. CLASS - Opening braces for classes MUST go on the next line, and the closing brace must be on a line of its own at the end.   YEA!, I've been fighting Kerrigan for years, and since I code this way, I'm a happy camper.  After the closing brace of the class leave one blank line.
 
@@ -30,19 +32,19 @@ Extends and implements keywords must be declared on the same line as the class. 
 
 Omit the closing PHP tag if the file contains all PHP code.  This one has tripped up many a developer with blank lines after the closing PHP tag throwing an error.
 
-Here's two examples:
-01	class SetUpPrint extends TC implements PrintInterface
-02	{
-03	    ...Do something
-04	}
-05	 
-06	class SetUpPrint extends TextClass implements
-07	    \PrintInterface
-08	    \FontInterface
-09	    \Internationlization
-10	{
-11	    ... Do something
-12	}
+#Here's two examples:
+	class SetUpPrint extends TC implements PrintInterface
+	{
+	    ...Do something
+	}
+	 
+	class SetUpPrint extends TextClass implements
+	    \PrintInterface
+	    \FontInterface
+	    \Internationlization
+	{
+	    ... Do something
+	}
 
 5. METHOD - Opening braces for methods must go on the next line, and a separate line for the closing brace. Yea! again.
 
@@ -55,26 +57,26 @@ Method names must not start with an _ .  This can cause some confusion with __co
 Method arguments: commas should have a space after the comma, but none before the comma.  Arguments can be put on multiple lines but they must be indented. If multiple lines are used for arguments, the opening parenthesis is on the method line, and closing parenthesis and the opening method brace are on the same line.
 
 Here's the example:
-01	class SetUpPrint extends TC implements PrintInterface
-02	{
-03	    final public static function cannedText($arg1, $arg2, $arg3)
-04	    {
-05	        private $count = 0;
-06	        public  $team_id = null;
-07	 
-08	        ... Do something
-09	    }
-10	 
-11	    private function calculateRate(
-12	        $arg1,
-13	        $arg2,
-14	        $arg3
-15	    ) {
-16	 
-17	        ... Do Something
-18	 
-19	    }
-20	}
+	class SetUpPrint extends TC implements PrintInterface
+	{
+	    final public static function cannedText($arg1, $arg2, $arg3)
+	    {
+	        private $count = 0;
+	        public  $team_id = null;
+	 
+	        ... Do something
+	    }
+	 
+	    private function calculateRate(
+	        $arg1,
+	        $arg2,
+	        $arg3
+	    ) {
+	 
+	        ... Do Something
+	 
+	    }
+	}
 
 The second method is harder to read, but every once and awhile is needed.
 
@@ -84,14 +86,14 @@ Closures must have a space after the function keyword.
 
 When used with the use keyword, there should be a space before and after the use keyword.
 
-Here's the example:
-1	$closureRouting = function ($arg1, $arg2) {
-2	    ... Do something
-3	};
-4	 
-5	$closureRouting2 = function () use ($var1, $var2) {
-6	    ... Do something
-7	};
+#Here's the example:
+	$closureRouting = function ($arg1, $arg2) {
+	    ... Do something
+	};
+	 
+	$closureRouting2 = function () use ($var1, $var2) {
+	    ... Do something
+	};
 
 7. PROPERTY - Declare a visibility on all properties.
 
@@ -121,66 +123,67 @@ The structured body should be indented.
 
 The closing brace should have a line of its own.
 
-Here are some examples of several control structures:
-01	if ($i == 1) {
-02	    Do something;
-03	} elseif ($i == 2) {
-04	    Do something else;
-05	} else {
-06	    Do a third thing;
-07	{
-08	 
-09	for ($i = 0; $i < 10, $i++) {
-10	    ... Do something;
-11	}
-12	 
-13	foreach ($condition as $key => $value) {
-14	    ... Do something
-15	}
-16	 
-17	try {
-18	    ...Do something, and throw some errors
-19	} catch (firstError $e) {
-20	    ... Do something with the error
-21	} catch (secondError $e) {
-22	    ... Do something else with an error
-23	}
+#Here are some examples of several control structures:
+	if ($i == 1) {
+	    Do something;
+	} elseif ($i == 2) {
+	    Do something else;
+	} else {
+	    Do a third thing;
+	{
+	 
+	for ($i = 0; $i < 10, $i++) {
+	    ... Do something;
+	}
+	 
+	foreach ($condition as $key => $value) {
+	    ... Do something
+	}
+	 
+	try {
+	    ...Do something, and throw some errors
+	} catch (firstError $e) {
+	    ... Do something with the error
+	} catch (secondError $e) {
+	    ... Do something else with an error
+	}
 
 8. SWITCH - The case keywords should be indented from the switch keyword. There should be a line between each case block with the exception of the first case.
 
 Inside the case, the break keyword should be indented with the rest of the code in the case body.
 
 There must be a comment, such as "// No break" when a fall-through is intentional in a non-empty case, like so:
-01	switch ($condition) {
-02	    case 0:
-03	        echo 'The condition is 0';
-04	        break;
-05	 
-06	    case 1:
-07	        echo 'The condition is 1. ';
-08	        // No break
-09	 
-10	    case 2:
-11	 
-12	    case 3:
-13	 
-14	    case 4:
-15	        echo 'The condition has been set';
-16	        return;
-17	 
-18	    default:
-19	        echo 'No condition was set';
-20	        break;
-21	}
+	switch ($condition) {
+	    case 0:
+	        echo 'The condition is 0';
+	        break;
+	 
+	    case 1:
+	        echo 'The condition is 1. ';
+	        // No break
+	 
+	    case 2:
+	 
+	    case 3:
+	 
+	    case 4:
+	        echo 'The condition has been set';
+	        return;
+	 
+	    default:
+	        echo 'No condition was set';
+	        break;
+}
 
+#
 9. KEYWORD - Here's one that I'm guilty of.  Keywords, like true, false, and null show be in lower case.  I've always put them in upper case for visibility, not anymore.  They should be set up like so:
-1	if ($turn == true) {
-2	    Do something;
-3	} elseif ($turn == false) {
-4	    Do something else;
-5	else {
-6	    Do a third thing;
-7	{
+	if ($turn == true) {
+	    Do something;
+	} elseif ($turn == false) {
+	    Do something else;
+	else {
+	    Do a third thing;
+	{
 
 That's it for PSR-2.  It is interesting to note that this style guide isn't just one developer's view of the world, which has been the problem with all the other style guides. The way this standard was developed was to poll all the members of FIG as to each coding style to determine the preference of a majority of the members, considering that the members of FIG cover a broad spectrum of PHP development, these coding styles should be considered not only a standard, but what the PHP community wants to see when reading code.  Thus a developer should strive to code with this style, knowing it is what other developers are expecting.  Thus a standard is born.
 
