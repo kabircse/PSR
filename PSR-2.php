@@ -1,4 +1,5 @@
 #PSR-2
+<?php
 
 The PSR-2 Coding Style Guide is an extension of PSR-1, which I reviewed in my last post.  The PSR standards were created and agreed to by a diverse group of PHP framework and library developers, so that all frameworks and libraries will be able to be used together with the same syntax.
 
