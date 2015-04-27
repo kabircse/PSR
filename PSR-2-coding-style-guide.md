@@ -801,3 +801,5 @@ A summary of what line the opening braces go on for classes, methods, and contro
         next/next/same: 11
         next/same/same: 1
         same/same/same: 6
+
+**For** https://docs.moodle.org/dev/Coding_style
